@@ -90,7 +90,8 @@ class MenuDrawer extends React.Component {
                                 {
                                     width: DRAWER_WIDTH,
                                     left: -DRAWER_WIDTH
-                                }
+                                },
+                                this.props.containerStyle
                             ]}
                         >
                             {drawerContent ? drawerContent : this.drawerFallback()}
@@ -100,7 +101,8 @@ class MenuDrawer extends React.Component {
                                 styles.container,
                                 {
                                     opacity: fadeAnim
-                                }
+                                },
+                                this.props.containerStyle
                             ]}
                         >
                             {children}
@@ -118,7 +120,8 @@ class MenuDrawer extends React.Component {
                         {
                             width: DRAWER_WIDTH,
                             left: -DRAWER_WIDTH
-                        }
+                        },
+                        this.props.containerStyle
                     ]}
                 >
                     {drawerContent ? drawerContent : this.drawerFallback()}
@@ -128,7 +131,8 @@ class MenuDrawer extends React.Component {
                         styles.container,
                         {
                             opacity: fadeAnim
-                        }
+                        },
+                        this.props.containerStyle
                     ]}
                 >
                     {children}
@@ -147,11 +151,11 @@ class MenuDrawer extends React.Component {
             return (
                 <SafeAreaView style={styles.main}>
                     <Animated.View
-                        style={[animated, styles.drawer, { width: DRAWER_WIDTH, left: -DRAWER_WIDTH }]}
+                        style={[animated, styles.drawer, this.props.containerStyle, { width: DRAWER_WIDTH, left: -DRAWER_WIDTH }]}
                     >
                         {drawerContent ? drawerContent : this.drawerFallback()}
                     </Animated.View>
-                    <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
+                    <Animated.View style={[styles.container, this.props.containerStyle, { opacity: fadeAnim }]}>
                         {children}
                     </Animated.View>
                 </SafeAreaView>
@@ -167,7 +171,8 @@ class MenuDrawer extends React.Component {
                         {
                             width: DRAWER_WIDTH,
                             left: -DRAWER_WIDTH
-                        }
+                        },
+                        this.props.containerStyle
                     ]}
                 >
                     {drawerContent ? drawerContent : this.drawerFallback()}
@@ -177,7 +182,8 @@ class MenuDrawer extends React.Component {
                         styles.container,
                         {
                             opacity: fadeAnim
-                        }
+                        },
+                        this.props.containerStyle
                     ]}
                 >
                     {children}
