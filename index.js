@@ -92,7 +92,7 @@ class MenuDrawer extends React.Component {
                                     width: DRAWER_WIDTH,
                                     left: -DRAWER_WIDTH
                                 },
-                                this.props.containerStyle
+                                this.props.drawerStyle
                             ]}
                         >
                             {drawerContent ? drawerContent : this.drawerFallback()}
@@ -122,7 +122,7 @@ class MenuDrawer extends React.Component {
                             width: DRAWER_WIDTH,
                             left: -DRAWER_WIDTH
                         },
-                        this.props.containerStyle
+                        this.props.drawerStyle
                     ]}
                 >
                     {drawerContent ? drawerContent : this.drawerFallback()}
@@ -155,7 +155,7 @@ class MenuDrawer extends React.Component {
                         style={[
                             animated,
                             styles.drawer,
-                            this.props.containerStyle,
+                            this.props.drawerStyle,
                             { width: DRAWER_WIDTH, left: -DRAWER_WIDTH }
                         ]}
                     >
@@ -178,7 +178,7 @@ class MenuDrawer extends React.Component {
                             width: DRAWER_WIDTH,
                             left: -DRAWER_WIDTH
                         },
-                        this.props.containerStyle
+                        this.props.drawerStyle
                     ]}
                 >
                     {drawerContent ? drawerContent : this.drawerFallback()}
